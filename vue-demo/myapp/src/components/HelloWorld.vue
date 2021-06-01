@@ -35,6 +35,8 @@ export default {
   name: 'HelloWorld',
   mounted(){
     console.log("parent:"+this.$parent);
+    console.log("title",this.title);
+    console.log("msg",this.msg);
     console.log("attrs",this.$attrs);
     console.log("$root",this.$root);
   },
