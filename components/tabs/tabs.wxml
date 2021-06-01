@@ -1,0 +1,19 @@
+<view class="tabs">
+  <!-- 
+    a.1 每一个 tab元素上面添加点击事件
+    a.2 给每一个tab元素添加data-item data属性
+    首页  data-item="index"
+    新闻  data-item="news"
+    关于  data-item="about"
+    a.6 根据 activeTab 动态改变 tab 激活的效果
+    {{ activeTab==='index'?'active':''}}
+    {{ activeTab==='news'?'active':''}}
+    {{ activeTab==='about'?'active':''}}
+ -->
+  <!-- <view data-item="index" bindtap="handleTap" class="tabs-item  {{ activeTab==='index'?'active':''}}">首页</view>
+  <view data-item="news" bindtap="handleTap"  class="tabs-item {{ activeTab==='news'?'active':''}}">新闻</view>
+  <view data-item="about" bindtap="handleTap" class="tabs-item    {{ activeTab==='about'?'active':''}}">关于</view> -->
+  <block wx:for="{{tabs}}" wx:key="key">
+    <view data-item="{{item.key}}" bindtap="handleTap" class="tabs-item  {{ activeTab===item.key?'active':''}}">{{item.name}}</view>
+  </block>
+</view>
