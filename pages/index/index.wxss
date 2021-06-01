@@ -1,0 +1,9 @@
+.big {
+  font-size: 20rpx;
+}
+
+.container {
+  width: 750rpx;
+  height: 50rpx;
+  background-color: red;
+}

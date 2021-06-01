@@ -1,0 +1,6 @@
+<view class="big">
+  小程序中的样式的效果
+  1. 响应式单位 rpx
+</view>
+
+<view class="container"></view>
