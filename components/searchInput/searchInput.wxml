@@ -1,0 +1,6 @@
+<view class="searchInput">
+<view class="content ">
+  搜索
+</view>
+</view>
+  <text class="yellow">黄色</text>

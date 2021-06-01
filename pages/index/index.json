@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "my-demo": "/components/demo/demo",
+    "search-input": "/components/searchInput/searchInput"
+  }
 }

@@ -9,3 +9,6 @@
 
 <view class="yellow">黄色的效果</view>
 <view class="blue">蓝色</view>
+
+<my-demo></my-demo>
+<search-input></search-input>
