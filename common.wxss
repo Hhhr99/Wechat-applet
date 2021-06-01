@@ -1,0 +1,6 @@
+.red{
+  color:red
+}
+.big_size {
+  font-size:50rpx;
+}

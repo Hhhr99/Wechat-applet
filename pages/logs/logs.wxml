@@ -4,3 +4,4 @@
     <text class="log-item">{{index + 1}}. {{log.date}}</text>
   </block>
 </view>
+<view class="blue yellow">蓝色</view>

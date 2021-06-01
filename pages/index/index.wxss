@@ -7,3 +7,7 @@
   height: 50rpx;
   background-color: red;
 }
+
+.blue {
+  color: blue
+}

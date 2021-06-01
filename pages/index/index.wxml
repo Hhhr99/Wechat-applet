@@ -4,3 +4,8 @@
 </view>
 
 <view class="container"></view>
+
+<view class="red big_size"> red </view>
+
+<view class="yellow">黄色的效果</view>
+<view class="blue">蓝色</view>
