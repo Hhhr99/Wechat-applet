@@ -1,0 +1,4 @@
+<view class="inputTodo">
+<input type="text"></input>
+<button>添加</button>
+</view>

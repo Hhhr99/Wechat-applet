@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "tabs": "/components/tabs/tabs",
-    "demo": "/components/demo/demo"
+    "demo": "/components/demo/demo",
+    "InputToDo": "/components/InputToDo/InputToDo",
+    "ToDoList": "/components/ToDoList/ToDoList"
   },
   "enablePullDownRefresh": true
 }

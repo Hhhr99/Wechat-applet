@@ -1,0 +1,11 @@
+<view class="todoList">
+  <view class="todoListItem">
+    <text>代办事项1</text><text>删除</text>
+  </view>
+  <view class="todoListItem">
+    <text>代办事项1</text><text>删除</text>
+  </view>
+  <view class="todoListItem">
+    <text>代办事项1</text><text>删除</text>
+  </view>
+</view>
