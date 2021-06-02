@@ -1,11 +1,6 @@
 <view class="todoList">
-  <view class="todoListItem">
-    <text>代办事项1</text><text>删除</text>
-  </view>
-  <view class="todoListItem">
-    <text>代办事项1</text><text>删除</text>
-  </view>
-  <view class="todoListItem">
-    <text>代办事项1</text><text>删除</text>
+  <view class="todoListItem" wx:for="{{todoList}}" wx:key="id">
+    <text>{{item.text}}</text>
+    <text bindtap="delTodo" data-index="{{index}}">删除</text>
   </view>
 </view>

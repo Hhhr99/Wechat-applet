@@ -1,4 +1,6 @@
 <view class="inputTodo">
-<input type="text"></input>
-<button>添加</button>
+  <!-- 通过 bindinput 事件获取 input的值-->
+  <input type="text" bindinput="handleInput"></input>
+  <!-- 通过 bindtap 为按钮添加点击事件-->
+  <button bindtap="handleAdd">添加</button>
 </view>

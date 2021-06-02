@@ -1,4 +1,4 @@
 <view>
-  <InputToDo></InputToDo>
-  <ToDoList></ToDoList>
+  <InputToDo bindmytodo="handleTodoInput"></InputToDo>
+  <ToDoList todoList="{{todoList}}" binddeltodo="handleDelTodo"></ToDoList>
 </view>
