@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "tabs":"/components/tabs/tabs",
-    "demo":"/components/demo/demo"
-  }
+    "tabs": "/components/tabs/tabs",
+    "demo": "/components/demo/demo"
+  },
+  "enablePullDownRefresh": true
 }
