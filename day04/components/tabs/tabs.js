@@ -5,10 +5,10 @@ Component({
    */
   /* b.3 接收父组件传入tab项目的值 */
   properties: {
-     tabs:{
-       type:Array,
-       value:[]
-     }
+    tabs: {
+      type: Array,
+      value: []
+    }
   },
 
   /**
@@ -27,6 +27,8 @@ Component({
     handleTap: function (e) {
       console.log(e);
       console.log("点击的项目：", e.target.dataset.item);
+      // b.4 通过自定事件将点击项代表值进行回传
+      this.triggerEvent("myclick", e.target.dataset.item);
       /* a.5 通过 this.setData({activeTab: e.target.dataset.item}) */
       this.setData({
         activeTab: e.target.dataset.item
