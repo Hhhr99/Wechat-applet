@@ -1,0 +1,2 @@
+<!-- a.4 demo 组件按钮上面 添加一个点击事件-->
+<button bindtap="handleDemoTap">回传值给父组件</button>

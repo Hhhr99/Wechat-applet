@@ -1,0 +1,84 @@
+<!-- radio 组件 
+raido 要和 radio-group 配合一起使用
+https://developers.weixin.qq.com/miniprogram/dev/component/radio-group.html
+-->
+<label>
+  <radio value="r" checked="true"></radio> 选中
+</label>
+<label>
+  <radio value="v" checked="{{false}}"></radio>未选中
+</label>
+<!-- 1. 绑定 bindchange事件 在 radio-group上面 
+bindchange="handleRadioChange"
+-->
+<radio-group bindchange="handleRadioChange">
+  <label>
+    <radio value="usa"></radio>美国
+    <label>
+      <radio value="cn"></radio>中国
+    </label>
+    <label>
+      <radio value="japan"></radio>日本
+    </label>
+  </label>
+</radio-group>
+<!-- checkbox 使用 -->
+<checkbox-group bindchange="handleCheckBoxChange">
+  <label>
+    <checkbox value="cn"></checkbox>中国
+  </label>
+  <label>
+    <checkbox value="usa"></checkbox>美国
+  </label>
+  <label>
+    <checkbox value="jp"></checkbox>日本
+  </label>
+</checkbox-group>
+<view>navigator组件的使用</view>
+<!-- 
+  navigator open-type
+  1. navigate 默认类型，跳转到非tabbar页面，同时保留之前所有页面
+  2. redirect 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。
+  3. switchTab 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
+  4. reLauch 关闭所有页面，打开到应用内的某个页面
+  5. navigateBack 关闭当前页面，返回上一页面或多级页面。可通过 getCurrentPages 获取当前的页面栈，决定需要返回几层。
+ -->
+<navigator open-type="navigate" url="/pages/logs/logs">跳转到logs页面</navigator>
+<navigator open-type="redirect" url="/pages/logs/logs">跳转到logs页面(redirect)</navigator>
+
+<navigator open-type="switchTab" url="/pages/test/test">跳转到test页面(switchTab)</navigator>
+<navigator open-type="reLaunch" url="/pages/logs/logs">跳转到logs页面(reLaunch)</navigator>
+<!-- 需要在真机环境下运行 -->
+<navigator open-type="exit" target="miniProgram">退出当前小程序</navigator>
+
+<!-- 
+  Image 组件 缩放模式
+  1. scaleToFill 缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
+  2. aspectFit
+  缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。
+  3. aspectFill	缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
+  4. widthFix	缩放模式，宽度不变，高度自动变化，保持原图宽高比不变
+ 5. heightFix	缩放模式，高度不变，宽度自动变化，保持原图宽高比不变
+ 6 9 种裁剪模式
+ https://developers.weixin.qq.com/miniprogram/dev/component/image.html
+  -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+<!-- scaleToFill -->
+<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="scaleToFill"
+  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+<text>\n</text>
+<!-- aspectFit -->
+<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit"
+  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+<text>\n</text>
+<!-- aspectFill -->
+<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFill"
+  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+<text>\n</text>
+<!-- widthFix -->
+<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="widthFix"
+  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+<text>\n</text>
+<!-- heightFix -->
+<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="heightFix"
+  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>

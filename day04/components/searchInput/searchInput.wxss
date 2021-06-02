@@ -1,0 +1,17 @@
+/* components/searchInput/searchInput.wxss */
+.searchInput{
+  height: 80rpx;
+  background-color: #ff0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content{
+  width: 90%;
+  height: 70rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#d2b7aa;
+}

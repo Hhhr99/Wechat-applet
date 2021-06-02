@@ -1,0 +1,52 @@
+<!-- 轮播图的例子 -->
+<!-- 
+  a.1 使用 swiper 组件，作为最外层组件
+  a.2 swiper-item
+  a.3 image 设置 src 属性,因为小程序中给 image组件设置默认的宽高（    width: 320px;
+    height: 240px;）,所以不满屏。 设置 css  image{ width:100%}
+ -->
+ <swiper indicator-color="#ffffff" indicator-dots="true" autoplay="{{true}}" interval="3000" duration="300">
+  <swiper-item wx:for="{{swiperData.message}}" wx:key="goods_id">
+    <image src="{{item.image_src}}"></image>
+  </swiper-item>
+</swiper>
+
+<view class="red" hover-class="big">
+  hello world!
+</view>
+<text decode="true">123&nbsp;</text><text decode="true">345&nbsp;</text>
+<!-- button 的基本使用 -->
+<button type="primary">primay</button>
+<button type="primary" loading="true">primay</button>
+<button type="primary" disabled="true">primay</button>
+
+<button type="default">default</button>
+<button type="default" loading="true">default</button>
+<button type="default" disabled="true">default</button>
+
+<button type="warn" size="mini">warn</button>
+<button type="primary" open-type="getUserInfo" bindgetuserinfo="handleUserInfo">获取用户信息</button>
+<button type="default" open-type="share">转发页面</button>
+<button type="warn" open-type="openSetting">打开系统设置页面</button>
+<button type="primary" open-type="contact">系统客服</button>
+
+<!-- icon组件 -->
+<icon type="success" size="30" color="#b7472a"></icon>
+<icon type="success_no_circle" size="30" color="#b7472a"></icon>
+<icon type="info" size="30" color="#06ad56"></icon>
+
+<icon type="warn" size="30" color="#06ad56"></icon>
+<icon type="waiting" size="30" color="#06ad56"></icon>
+<icon type="cancel" size="30" color="#06ad56"></icon>
+<icon type="download" size="30" color="#06ad56"></icon>
+<icon type="search" size="30" color="#06ad56"></icon>
+<icon type="clear" size="30" color="#06ad56"></icon>
+
+<!-- 
+  需求：使用新的接口 wx.getUserProfile 获取用户的个人信息
+  b.1 定义 button 
+  b.2 button 定义 bindtap 的处理事件
+   bindtap="handleUserInfo"
+
+ -->
+ <button  bindtap="handleUserInfo">使用 getUserProfile获取用户的个人信息</button>

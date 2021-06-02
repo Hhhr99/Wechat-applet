@@ -1,0 +1,8 @@
+/**index.wxss**/
+.red{
+  color:red
+}
+.big{
+  font-size:100rpx;
+}
+image{ width:100%}
