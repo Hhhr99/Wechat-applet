@@ -1,31 +1,35 @@
-// index.js
-// 获取应用实例
-const app = getApp()
-
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
     swiperData: []
   },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function (options) {
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: async function (options) {
     // b.1 在 onLoad生命周期中发请求获取数据
     // b.2 success 回调函数 把它定义成箭头函数方式，目的为了能够正确获取当前 this 
-    wx.request({
-      url: 'https://106.55.254.112/api/public/v1/home/swiperdata',
-      success: (res) => {
-        console.log(res.data);
-        // b.3 通过 res.data.message 轮播图中的数据
-        this.setData({
-          swiperData: res.data.message
-        })
-      }
+    // 目标：使用 promise 对请求 进行封装，async await 讲异步代码改同步，消灭回调地狱
+    let result = await new Promise(function (resolve, reject) {
+      wx.request({
+        url: 'https://106.55.254.112/api/public/v1/home/swiperdata',
+        success: (res) => {
+          console.log(res.data);
+          resolve(res.data);
+        }
+      })
     })
+    // console.log(result);
+    this.setData({
+      swiperData: result.message
+    })
+
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
