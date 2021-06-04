@@ -1,1 +1,5 @@
 /* components/mySwiper/mySwiper.wxss */
+
+.navigator-item {
+  height: 340rpx;
+}

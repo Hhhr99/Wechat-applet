@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperData: []
+    swiperData: [],
+    // b.1 首页分类导航的数据
+    navs: []
   },
 
   /**
@@ -31,9 +33,14 @@ Page({
       url: 'home/swiperdata'
     })
     console.log(result);
+    // b.2 调用接口，获取分类导航的数据
+    let result2 = await ajaxUtil.request({
+      url: "home/catitems"
+    })
     // console.log(result);
     this.setData({
-      swiperData: result.message
+      swiperData: result.message,
+      navs: result2.message
     })
 
   },

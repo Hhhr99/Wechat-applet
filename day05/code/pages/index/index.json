@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "searchInput": "/components/searchInput/searchInput",
-    "mySwiper": "/components/mySwiper/mySwiper"
+    "mySwiper": "/components/mySwiper/mySwiper",
+    "myNavs": "/components/myNavs/myNavs"
   }
 }
