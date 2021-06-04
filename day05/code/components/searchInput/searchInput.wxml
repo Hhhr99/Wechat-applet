@@ -1,2 +1,6 @@
-<!--components/searchInput/searchInput.wxml-->
-<text>components/searchInput/searchInput.wxml</text>
+<!-- a.1 搜索框最外面的盒子，添加点击事件-->
+<view class="searchInput" bindtap="goToSearchCenter">
+  <view class="content">
+    搜索
+  </view>
+</view>
