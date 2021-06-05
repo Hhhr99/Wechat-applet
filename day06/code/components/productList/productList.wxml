@@ -1,2 +1,9 @@
-<!--pages/productList/productList.wxml-->
-<text>pages/productList/productList.wxml</text>
+<view class="product-list">
+  <view class="product-list-item" wx:for="{{floorData}}" wx:key="index">
+    <!--一级标题的开始-->
+    <view class="list-item-title">
+      <image class="title-image" src="{{item.floor_title.image_src}}"></image>
+    </view>
+    <!--一级标题的结束-->
+  </view>
+</view>

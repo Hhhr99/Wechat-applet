@@ -1,1 +1,9 @@
-/* pages/productList/productList.wxss */
+/* components/productList/productList.wxss */
+
+.product-list {
+  margin-top: 43rpx;
+}
+
+.title-image {
+  height: 59rpx;
+}
