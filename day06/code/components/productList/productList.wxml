@@ -5,5 +5,12 @@
       <image class="title-image" src="{{item.floor_title.image_src}}"></image>
     </view>
     <!--一级标题的结束-->
+    <!--首页的图片列表开始-->
+    <view class="list-item-pics">
+      <view class="item-pics-image" wx:for="{{item.product_list}}" wx:key="image_src" wx:for-item="v" wx:for-index="i">
+        <image src="{{v.image_src}}" class="pics-image-item" catchtap="goToGoodList" data-v="{{v}}"></image>
+      </view>
+    </view>
+    <!--首页的图片列表结束-->
   </view>
 </view>

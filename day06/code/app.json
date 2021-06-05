@@ -6,7 +6,8 @@
     "pages/my/my",
     "pages/searchCenter/searchCenter",
     "pages/goodDetail/goodDetail",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/goodsList/goodsList"
   ],
   "window": {
     "backgroundTextStyle": "light",

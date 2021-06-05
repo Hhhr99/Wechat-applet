@@ -1,9 +1,33 @@
-/* components/productList/productList.wxss */
-
-.product-list {
-  margin-top: 43rpx;
+.list-item-pics {
+  overflow: hidden;
 }
 
-.title-image {
-  height: 59rpx;
+.item-pics-image {
+  float: left;
+  padding-left: 12rpx;
+}
+
+.item-pics-image:nth-child(1) .pics-image-item {
+  width: 232rpx;
+  height: 386rpx;
+}
+
+.item-pics-image:nth-child(2) .pics-image-item {
+  width: 233rpx;
+  height: 188rpx;
+}
+
+.item-pics-image:nth-child(4) .pics-image-item {
+  width: 233rpx;
+  height: 188rpx;
+}
+
+.item-pics-image:nth-child(3) .pics-image-item {
+  width: 232rpx;
+  height: 188rpx;
+}
+
+.item-pics-image:nth-child(5) .pics-image-item {
+  width: 232rpx;
+  height: 188rpx;
 }

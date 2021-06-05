@@ -3,12 +3,13 @@
  * 2. 通用请求URL
  * https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showLoading.html
  * 3. 加遮罩信息
- * 
+ *
  */
-const BASE_URL = "https://106.55.254.112/api/public/v1/"
+// const BASE_URL = "https://106.55.254.112/api/public/v1/"
+const BASE_URL = "https://api-hmugo-web.itheima.net/api/public/v1/"
 /**
- * 
- * @param {请求的参数} params 
+ *
+ * @param {请求的参数} params
  */
 // a.1 使用箭头函数定义一个 request 变量
 const request = (params) => {
