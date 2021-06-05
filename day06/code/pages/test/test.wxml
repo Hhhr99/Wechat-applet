@@ -1,0 +1,66 @@
+<view>
+  <scroll-view class="left" scroll-y="true">
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+    <view>123</view>
+
+  </scroll-view>
+  <scroll-view class="right" scroll-y="true">
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+    <view>456</view>
+  </scroll-view>
+</view>

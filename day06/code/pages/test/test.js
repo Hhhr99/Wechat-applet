@@ -1,6 +1,4 @@
-// pages/category/category.js
-// a.2 引入自定义请求库
-const ajaxUtil = require("../../ajaxUtil/request.js")
+// pages/test/test.js
 Page({
 
   /**
@@ -8,24 +6,13 @@ Page({
    */
   data: {
 
-    // a.1 定义一个 分类数据源
-    categories: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  // a.3 为 onLoad 回调函数添加 async 关键词
-  onLoad: async function (options) {
-    // a.4 发请求获取分类的数据
-    let result = await ajaxUtil.request({
-      url: "categories"
-    })
-    // console.log(result);
-    // a.5 将 分类中的数据 存到 data 中的 categories
-    this.setData({
-      categories: result.message
-    })
+  onLoad: function (options) {
+
   },
 
   /**
