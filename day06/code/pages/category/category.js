@@ -11,13 +11,17 @@ Page({
     // a.1 定义一个 分类数据源
     categories: [],
     // b.1 定义一个选中项目下标,默认选中第0项
-    select_index: 0
+    select_index: 0,
+    // c.1 定义一个变量 存 现在右边渲染的内容
+    rightContent: []
   },
   // 点击分类菜单左边项的逻辑
   handleTap: function (e) {
     console.log(e.target.dataset.index);
+    let index = e.target.dataset.index;
     this.setData({
-      select_index: e.target.dataset.index
+      rightContent: this.data.categories[index].children,
+      select_index: index
     })
   },
 
@@ -32,8 +36,10 @@ Page({
     })
     // console.log(result);
     // a.5 将 分类中的数据 存到 data 中的 categories
+    // c.2 将右边菜单的内容初始化
     this.setData({
-      categories: result.message
+      categories: result.message,
+      rightContent: result.message[this.data.select_index].children
     })
   },
 

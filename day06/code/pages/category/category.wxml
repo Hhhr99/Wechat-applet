@@ -12,8 +12,18 @@
   <!-- 分类菜单左边的部分结束-->
   <!-- 分类菜单右边的部分开始-->
   <scroll-view scroll-y="true" class="cate-right">
-
-
+    <view class="cate-right-item" wx:for="{{rightContent}}" wx:key="index">
+      <view class="right-item-t">
+        / {{item.cat_name}}/
+      </view>
+      <view class="right-item-list">
+        <navigator url="/pages/goodsList/goodsList?cid={{v.cat_id}}" class="item-list-i" wx:for="{{item.children}}"
+          wx:for-item="v" wx:for-index="i" wx:key="cat_id">
+          <image class="list-i-image" src="{{v.cat_icon}}"></image>
+          <view class="list-i-title">{{v.cat_name}}</view>
+        </navigator>
+      </view>
+    </view>
   </scroll-view>
   <!-- 分类菜单右边的部分结束-->
 </view>
