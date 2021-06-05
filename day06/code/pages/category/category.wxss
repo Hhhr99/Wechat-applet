@@ -1,1 +1,26 @@
 /* pages/category/category.wxss */
+
+.cate-left {
+  float: left;
+  width: 182rpx;
+  height: calc(100vh - 100rpx);
+  background-color: #f3f3f3;
+}
+
+.cate-item-active {
+  color: #eb4450;
+  border-left: 4rpx solid #eb4450;
+}
+
+.cate-left-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.cate-right {
+  float: left;
+  width: calc(100vw - 182rpx);
+  height: calc(100vh - 100rpx);
+
+}

@@ -9,7 +9,16 @@ Page({
   data: {
 
     // a.1 定义一个 分类数据源
-    categories: []
+    categories: [],
+    // b.1 定义一个选中项目下标,默认选中第0项
+    select_index: 0
+  },
+  // 点击分类菜单左边项的逻辑
+  handleTap: function (e) {
+    console.log(e.target.dataset.index);
+    this.setData({
+      select_index: e.target.dataset.index
+    })
   },
 
   /**

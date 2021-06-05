@@ -2,5 +2,18 @@
   <!--分类页面的搜索组件的开始-->
   <searchInput></searchInput>
   <!--分类页面的搜索组件的结束-->
+  <!-- 分类菜单左边的部分开始-->
+  <scroll-view scroll-y="true" class="cate-left">
+    <view class="cate-left-item {{select_index===index?'cate-item-active':''}}" wx:for="{{categories}}" wx:key="index"
+      catchtap="handleTap" data-index="{{index}}">
+      {{item.cat_name}}
+    </view>
+  </scroll-view>
+  <!-- 分类菜单左边的部分结束-->
+  <!-- 分类菜单右边的部分开始-->
+  <scroll-view scroll-y="true" class="cate-right">
 
+
+  </scroll-view>
+  <!-- 分类菜单右边的部分结束-->
 </view>
