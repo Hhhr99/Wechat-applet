@@ -5,7 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    activeTab: "overall",
+    tabs: [{
+      text: "综合",
+      target: "overall"
+    }, {
+      text: "销量",
+      target: "sale"
+    }, {
+      text: "价格",
+      target: "price"
+    }]
+  },
+  handleTabClick: function (e) {
+    // console.log(e);
+    // console.log("点击的项：",e.detail);
+    this.setData({
+      activeTab: e.detail
+    })
   },
 
   /**

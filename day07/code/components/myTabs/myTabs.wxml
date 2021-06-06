@@ -1,11 +1,12 @@
-<view class="my-tabs">
-   <view class="my-tabs-item tabs-item-active">
-   综合
+<view class="my-tabs" catchtap="handleTabClick">
+   <view wx:for="{{tabs}}" class="my-tabs-item  {{activeTab===item.target?'tabs-item-active':''}}" wx:key="target"
+      data-target="{{item.target}}">
+      {{item.text}}
    </view>
-   <view class="my-tabs-item">
+   <!-- <view class="my-tabs-item {{target==='sale'?'tabs-item-active':''}}"   data-target="sale">
   销量
    </view>
-   <view class="my-tabs-item">
+   <view class="my-tabs-item {{target==='price'?'tabs-item-active':''}}" data-target="price" >
    价格
-   </view>
+   </view> -->
 </view>

@@ -3,6 +3,6 @@
   <searchInput></searchInput>
   <!--搜索的结束-->
   <!--tabs 开始-->
-  <mytabs></mytabs>
+  <mytabs tabs="{{tabs}}" activeTab="{{activeTab}}" bindmytab="handleTabClick"></mytabs>
   <!--tabs 结束-->
 </view>
