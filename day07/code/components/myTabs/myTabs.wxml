@@ -1,0 +1,11 @@
+<view class="my-tabs">
+   <view class="my-tabs-item tabs-item-active">
+   综合
+   </view>
+   <view class="my-tabs-item">
+  销量
+   </view>
+   <view class="my-tabs-item">
+   价格
+   </view>
+</view>

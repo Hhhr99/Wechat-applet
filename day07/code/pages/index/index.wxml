@@ -1,0 +1,14 @@
+<view>
+<!--首页搜索框的开始-->
+<searchInput></searchInput>
+<!--首页搜索框的结束-->
+<!--首页轮播图的开始-->
+<mySwiper swiperData="{{swiperData}}"></mySwiper>
+<!--首页轮播图的结束-->
+<!--首页图片导航开始-->
+<myNavs navs="{{navs}}"></myNavs>
+<!--首页图片导航结束-->
+<!--首页的图片列表开始-->
+<productList floorData="{{floorData}}"></productList>
+<!--首页的图片列表结束-->
+</view>

@@ -1,0 +1,13 @@
+/* pages/test/test.wxss */
+
+.left{
+  float: left;
+  width: 200rpx;
+  
+  height: 500rpx;
+}
+.right{
+  height: 500rpx;
+  width: 550rpx;
+  float: left;
+}
