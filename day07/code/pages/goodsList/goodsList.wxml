@@ -8,7 +8,16 @@
   <!--tabs内容的开始-->
   <view class="gd-list">
     <view wx:if="{{activeTab==='overall'}}">
-      综合
+      <navigator url="/pages/goodDetail/goodDetail?goods_id={{item.goods_id}}" class="gd-list-item" wx:for="{{goods}}"
+        wx:key="goods_id">
+        <view class="gd-list-left">
+          <image class="gd-list-image" src="{{item.goods_big_logo?item.goods_big_logo:'/images/empty.png'}}"></image>
+        </view>
+        <view class="gd-list-right">
+          <view class="gd-list-name">{{item.goods_name}}</view>
+          <view class="gd-list-price">￥{{item.goods_price}}</view>
+        </view>
+      </navigator>
     </view>
     <view wx:if="{{activeTab==='sale'}}">销量</view>
     <view wx:if="{{activeTab==='price'}}">价格</view>
