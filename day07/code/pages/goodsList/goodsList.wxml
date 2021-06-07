@@ -5,4 +5,13 @@
   <!--tabs 开始-->
   <mytabs tabs="{{tabs}}" activeTab="{{activeTab}}" bindmytab="handleTabClick"></mytabs>
   <!--tabs 结束-->
+  <!--tabs内容的开始-->
+  <view class="gd-list">
+    <view wx:if="{{activeTab==='overall'}}">
+      综合
+    </view>
+    <view wx:if="{{activeTab==='sale'}}">销量</view>
+    <view wx:if="{{activeTab==='price'}}">价格</view>
+  </view>
+  <!--tabs内容的结束-->
 </view>

@@ -1,10 +1,14 @@
 // pages/goodsList/goodsList.js
+// a.1. 引入请求模块
+let ajaxUtil = require("../../ajaxUtil/request.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    // a.4 定义一个 data goods
+    goods: [],
     activeTab: "overall",
     tabs: [{
       text: "综合",
@@ -17,6 +21,12 @@ Page({
       target: "price"
     }]
   },
+  // a.5 定义 total,pagenum,pagesize(默认20),query,cid
+  total: 0,
+  pagenum: 1,
+  pagesize: 20,
+  query: "",
+  cid: "",
   handleTabClick: function (e) {
     // console.log(e);
     // console.log("点击的项：",e.detail);
@@ -28,8 +38,23 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    console.log(options);
+  // a.2 函数 添加 async 关键词
+  onLoad: async function (options) {
+    // console.log(options);
+    // console.log(this);
+    // a.3 发异步请求获取数据
+    let result = await ajaxUtil.request({
+      url: "goods/search"
+    })
+    console.log(result);
+    // a.6 total,pagenum,pagesize,goods 赋值
+    this.total = result.message.total;
+    this.pagenum = result.message.pagenum;
+    this.pagesize = 20; // 默认值是 20
+    this.setData({
+      goods: result.message.goods
+    })
+
   },
 
   /**
