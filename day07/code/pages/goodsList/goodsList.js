@@ -120,6 +120,8 @@ Page({
         ...params
       }
     })
+    // 停止下拉
+    wx.stopPullDownRefresh();
     this.total = result.message.total;
     this.pagenum = result.message.pagenum;
     this.setData({
@@ -132,14 +134,14 @@ Page({
    */
   onPullDownRefresh: function () {
     // 下拉清空列表，加载最新的数据
-    console.log("用户下拉了");
-    this.setData({
-      goods: []
-    })
+    // console.log("用户下拉了");
+    // this.setData({
+    //   goods: []
+    // })
     // 调用获取最新产品列表函数
     this.getProductList();
     // 停止下拉
-    wx.stopPullDownRefresh();
+    // wx.stopPullDownRefresh();
   },
 
   /**
