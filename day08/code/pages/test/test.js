@@ -7,7 +7,13 @@ Page({
   data: {
 
   },
-
+  handlePreview: function () {
+    let urls = ["http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_1_800x800.jpg", "http://image1.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_2_800x800.jpg", "http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_3_800x800.jpg"]
+    wx.previewImage({
+      current: "http://image1.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_2_800x800.jpg",
+      urls: urls,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

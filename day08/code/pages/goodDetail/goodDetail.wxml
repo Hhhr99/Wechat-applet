@@ -1,2 +1,6 @@
-<!--pages/goodDetail/goodDetail.wxml-->
-<text>pages/goodDetail/goodDetail.wxml</text>
+<view class="gd-detail">
+  <!--商品详情的轮播图开始-->
+  <!-- b.1 父传子 将商品详情中的图片数据 传如到 gd-swiper 组件中-->
+  <gd-swiper pics="{{goodInfo.pics}}"></gd-swiper>
+  <!--商品详情的轮播图结束-->
+</view>
