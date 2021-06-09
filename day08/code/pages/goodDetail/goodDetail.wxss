@@ -1,1 +1,34 @@
 /* pages/goodDetail/goodDetail.wxss */
+.gd-detail-price {
+  display: flex;
+  padding: 0 35rpx 0 35rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-price-left {
+  color: var(--themeColor);
+}
+
+.detail-price-right {
+  display: flex;
+  align-items: center;
+}
+
+.price-right-share {
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.price-right-share .iconfont {}
+
+.price-right-share button {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100%;
+}

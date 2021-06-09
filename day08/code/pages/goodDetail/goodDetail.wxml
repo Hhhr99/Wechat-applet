@@ -7,7 +7,14 @@
     价格区域的开始
   -->
   <view class="gd-detail-price">
-    <view class="iconfont icon-fenxiang"></view>
+    <view class="detail-price-left">￥{{goodInfo.goods_price}}</view>
+    <view class="detail-price-right">
+      <view class="price-right-share">
+        <view class="iconfont icon-fenxiang"></view>
+        <button open-type="share" size="mini" type="default"></button>
+      </view>
+      <view class="iconfont icon-add"></view>
+    </view>
     <view class="iconfont icon-add"></view>
   </view>
   <!--
