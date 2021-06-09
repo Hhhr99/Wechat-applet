@@ -24,4 +24,10 @@
     {{goodInfo.goods_name}}
   </view>
   <!--商品详情标题部分结束-->
+  <!--商品详情的内容开始-->
+  <view class="gd-detail-content">
+    <view class="detail-content-title">图文详情</view>
+    <rich-text nodes="{{goodInfo.goods_introduce}}"></rich-text>
+  </view>
+  <!--商品详情的内容结束-->
 </view>

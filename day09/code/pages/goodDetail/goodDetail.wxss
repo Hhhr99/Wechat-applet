@@ -46,3 +46,10 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+.detail-content-title {
+  font-size: 28rpx;
+  margin-top: 67rpx;
+  height: 40rpx;
+  text-align: center;
+}
