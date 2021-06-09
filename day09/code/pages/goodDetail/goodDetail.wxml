@@ -19,4 +19,9 @@
   <!--
     价格区域的结束
   -->
+  <!--商品详情标题部分开始-->
+  <view class="gd-detail-title">
+    {{goodInfo.goods_name}}
+  </view>
+  <!--商品详情标题部分结束-->
 </view>

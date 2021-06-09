@@ -16,7 +16,7 @@ text,
 swiper,
 swiper-item,
 input {
-  padding: 0 !important;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
   --themeColor: #eb4450;
