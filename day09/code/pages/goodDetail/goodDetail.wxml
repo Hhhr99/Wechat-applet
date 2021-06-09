@@ -39,10 +39,10 @@
       <view class="bottom-contact-text">联系客服</view>
       <button open-type="contact" size="mini"></button>
     </view>
-    <view class="detail-bottom-cart">
+    <navigator url="/pages/cart/cart" open-type="switchTab" class="detail-bottom-cart">
       <view class="iconfont icon-gouwuche"></view>
       <view class="bottom-cart-text">购物车</view>
-    </view>
+    </navigator>
     <view class="detail-bottom-add">
       <view class="bottom-add-btn">
         加入购物车

@@ -69,12 +69,22 @@
 .detail-bottom-contact {
   flex: 1;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .detail-bottom-contact .iconfont {}
+
+.detail-bottom-contact button {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100%;
+}
 
 .bottom-contact-text {
   font-size: 20rpx;
