@@ -43,17 +43,16 @@
       <view class="iconfont icon-gouwuche"></view>
       <view class="bottom-cart-text">购物车</view>
     </navigator>
-    <view class="detail-bottom-add">
+    <view class="detail-bottom-add" catchtap="handleAddToCart">
       <view class="bottom-add-btn">
         加入购物车
       </view>
-
     </view>
-    <view class="detail-bottom-buy">
+    <navigator url="/pages/pay/pay" class="detail-bottom-buy">
       <view class="bottom-buy-btn">
         立即购买
       </view>
-    </view>
+    </navigator>
   </view>
   <!--工具栏结束-->
 </view>

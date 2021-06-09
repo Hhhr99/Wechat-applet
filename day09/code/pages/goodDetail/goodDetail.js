@@ -56,6 +56,50 @@ Page({
       goodInfo: result.message
     })
   },
+  // 加入购物车 逻辑
+  handleAddToCart: function () {
+    // c.1 首先从本地缓存中获取当前的购物小车的数据（如果有后台接口，这里应该是从后台接口获取购物车的树）
+    // c.1.1 本地缓存中的购物小城 以 cart 为key值存起来
+    let cart = wx.getStorageSync('cart') || [];
+    // c.2 判断当前的商品在购物小车是否已经存在
+    let index = cart.findIndex(v => v.goods_id == this.data.goodInfo.goods_id);
+    if (index === -1) {
+      // c.3 将当前商品加入到购物小车中
+      // c.3.1 goodInfo 选中的状态 checked
+      // c.3.2 goodInfo 数量，表示当前选中商品的数量
+      // c.3.3 如果当前的商品数量是 0或者由于数量出错，出现负数的情况 ，也是添加不到购物小车中的
+      if (this.data.goodInfo.goods_number <= 0) {
+        wx.showToast({
+          title: '当前的商品库存是为0 ',
+        })
+      } else {
+        let goodInfo = this.data.goodInfo;
+        goodInfo.checked = true;
+        goodInfo.num = 1;
+        cart.push(goodInfo);
+        wx.showToast({
+          title: '加入购物小车成功了',
+        })
+      }
+    } else {
+      // c.4 当前的商品已经在购物车中
+      // c.4.1 判断当前的数量大于库存不
+      // c.4.2 当前添加的数量大于库存，提供用户操作库存，不能添加
+      // c.4.3 否则找到该商品，数量加1
+      //debugger
+      if (cart[index].num + 1 > this.data.goodInfo.goods_number) {
+        wx.showToast({
+          title: '添加数量已经超过库存了',
+        })
+      } else {
+        cart[index].num += 1;
+        wx.showToast({
+          title: '添加商品成功了',
+        })
+      }
+    }
+    wx.setStorageSync('cart', cart);
+  },
   handleCollect: function () {
     console.log("收藏商品");
     // b.1 将商品数据存到本地缓存中
