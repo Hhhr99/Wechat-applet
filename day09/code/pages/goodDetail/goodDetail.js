@@ -8,7 +8,10 @@ Page({
    */
   data: {
     // a.5 定义一个 goodInfo 空对象，用来存储商品信息的
-    goodInfo: {}
+    goodInfo: {},
+    // b.2 添加一个状态为 is_collect,表示的是当前商品的收藏的状态
+    // 默认情况下，当前商品没有收藏
+    is_collect: false
   },
 
   /**
@@ -33,6 +36,21 @@ Page({
         goods_id
       }
     })
+    // b.5 页面刚加载的时候，判断一下当前的商品的收藏的状态
+    // 如果已经收藏  is_collect = true
+    // 如果没有收藏  is_collect = false
+    let collect = wx.getStorageSync('collect') || [];
+    let index = collect.findIndex(v => v.goods_id == goods_id);
+    if (index === -1) {
+      // 说明商品没有收藏过 is_collect => false
+      this.setData({
+        is_collect: false
+      })
+    } else {
+      this.setData({
+        is_collect: true
+      })
+    }
     // a.6 将商品返回的数据 通过 setData 存到 data 中
     this.setData({
       goodInfo: result.message
@@ -49,8 +67,29 @@ Page({
     // b.1.4.1 判断当前的商品是否在 collect 对象中,根据是 goods_id
     //  collect.findIndex
 
-    // b.1.5 将当前商品信息 保存到 collect 对象中
-    collect.push(this.data.goodInfo);
+    let index = collect.findIndex(v => v.goods_id == this.data.goodInfo.goods_id);
+    if (index === -1) {
+      // 说明当前的商品不在本地collect 缓存中
+      // b.1.5 将当前商品信息 保存到 collect 对象中
+      collect.push(this.data.goodInfo);
+      // b.3 将当前的收藏的状态为 is_collect 修改成 true
+      this.setData({
+        is_collect: true
+      })
+      wx.showToast({
+        title: '商品收藏成功了！'
+      })
+    } else {
+      // b.1.6 取消收藏
+      collect.splice(index, 1);
+      // b.4 取消收藏的时候 将 is_collect 状态修改成 false
+      this.setData({
+        is_collect: false
+      })
+      wx.showToast({
+        title: '取消收藏！',
+      })
+    }
 
     wx.setStorageSync('collect', collect)
   },

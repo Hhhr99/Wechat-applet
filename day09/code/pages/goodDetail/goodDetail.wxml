@@ -13,7 +13,7 @@
         <view class="iconfont icon-fenxiang"></view>
         <button open-type="share" type="default"></button>
       </view>
-      <view class="iconfont icon-add"></view>
+      <view class="iconfont icon-add {{is_collect?'collect-active':''}}" catchtap="handleCollect"></view>
     </view>
   </view>
   <!--

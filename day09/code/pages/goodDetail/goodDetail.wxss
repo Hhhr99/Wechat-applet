@@ -32,3 +32,8 @@
   width: 100% !important;
   height: 100%;
 }
+
+/* 收藏图标激活效果*/
+.collect-active {
+  color: #eb4450
+}
