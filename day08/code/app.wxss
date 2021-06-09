@@ -9,13 +9,14 @@
 @import "./common/iconfont.wxss";
 
 view,
+button,
 navigator,
 image,
 text,
 swiper,
 swiper-item,
 input {
-  padding: 0;
+  padding: 0 !important;
   margin: 0;
   box-sizing: border-box;
   --themeColor: #eb4450;

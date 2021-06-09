@@ -11,11 +11,10 @@
     <view class="detail-price-right">
       <view class="price-right-share">
         <view class="iconfont icon-fenxiang"></view>
-        <button open-type="share" size="mini" type="default"></button>
+        <button open-type="share" type="default"></button>
       </view>
       <view class="iconfont icon-add"></view>
     </view>
-    <view class="iconfont icon-add"></view>
   </view>
   <!--
     价格区域的结束
