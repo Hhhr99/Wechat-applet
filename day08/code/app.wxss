@@ -3,14 +3,25 @@
   样式初始化的化，要一个一个写
   var(--themeColor)
 **/
+/*
+  全局引入字体图标
+*/
+@import "./common/iconfont.wxss";
 
-view,navigator,image,text,swiper,swiper-item,input{
-  padding:0;
-  margin:0;
+view,
+navigator,
+image,
+text,
+swiper,
+swiper-item,
+input {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  --themeColor:#eb4450;
+  --themeColor: #eb4450;
 }
-image{
+
+image {
   width: 100%;
   height: 100%;
 }
