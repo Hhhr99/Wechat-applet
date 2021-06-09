@@ -7,8 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-  // a.5 定义一个 goodInfo 空对象，用来存储商品信息的
-  goodInfo:{}
+    // a.5 定义一个 goodInfo 空对象，用来存储商品信息的
+    goodInfo: {}
   },
 
   /**
@@ -21,22 +21,39 @@ Page({
     // let goods_id = options.goods_id;
     // console.log(goods_id);
     // a.1 补充 es6 提供解构赋值语法
-    let { goods_id } = options;
+    let {
+      goods_id
+    } = options;
     console.log(goods_id);
     // a.4 发请求获取数据  await !!!
     let result = await ajaxUtil.request({
-      url:"goods/detail",
-      data:{
+      url: "goods/detail",
+      data: {
         // goods_id:goods_id
         goods_id
       }
     })
     // a.6 将商品返回的数据 通过 setData 存到 data 中
     this.setData({
-      goodInfo:result.message
+      goodInfo: result.message
     })
   },
+  handleCollect: function () {
+    console.log("收藏商品");
+    // b.1 将商品数据存到本地缓存中
+    // b.1.1 收藏本地缓存的 key 名称叫 collect
+    // b.1.2 收藏本地缓存中数据 [goodInfo,goodInfo,goodInfo]
+    // b.1.3 用本地缓存中同步方式 存商品的收藏信息
+    // b.1.4 获取之前本地缓存中的数据
+    let collect = wx.getStorageSync('collect') || []; // 比如说，第一次进来的时候，获取不到 收藏信息信息，所以要做一个异常处理
+    // b.1.4.1 判断当前的商品是否在 collect 对象中,根据是 goods_id
+    //  collect.findIndex
 
+    // b.1.5 将当前商品信息 保存到 collect 对象中
+    collect.push(this.data.goodInfo);
+
+    wx.setStorageSync('collect', collect)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
