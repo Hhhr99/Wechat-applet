@@ -1,0 +1,3 @@
+<button bindtap="handleTap">获取data 中 msg 值</button>
+
+<button bindtap="handlePreview">预览的效果</button>
