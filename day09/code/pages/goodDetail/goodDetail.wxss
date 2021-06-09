@@ -53,3 +53,13 @@
   height: 40rpx;
   text-align: center;
 }
+
+.gd-detail-top {
+  height: calc(100vh - 94rpx);
+  overflow-y: scroll;
+}
+
+.gd-detail-bottom {
+  height: 94rpx;
+  background-color: #ffffff;
+}
