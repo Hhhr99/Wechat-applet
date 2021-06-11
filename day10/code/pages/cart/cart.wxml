@@ -1,2 +1,17 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view>
+  <!--如果购物车中的数量不等于0 那么就显示有购物车的内容；等于0 显示一个空白购物车页面-->
+  <view wx:if="{{carts.length === 0}}">
+    <view class="pyg_cart_empty">
+      <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3298947587,976044362&fm=15&gp=0.jpg"
+        mode="widthFix"></image>
+      <view class="empty_text">购物车居然是空的</view>
+      <view class="empty_info">再忙，也记得买点什么犒赏自己~</view>
+      <navigator url="/pages/category/index" open-type="switchTab">
+        <view class="go_shopping">去逛逛</view>
+      </navigator>
+    </view>
+  </view>
+  <view wx:else>
+    显示购物车的内容
+  </view>
+</view>

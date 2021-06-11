@@ -1,1 +1,38 @@
 /* pages/cart/cart.wxss */
+
+/* 空白购物车样式 */
+.pyg_cart_empty {
+  height: 100vh;
+  background-color: white;
+}
+
+.pyg_cart_empty .empty_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f5f64;
+  font-size: 500;
+}
+
+.pyg_cart_empty .empty_info {
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+}
+
+.pyg_cart_empty navigator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pyg_cart_empty navigator .go_shopping {
+  font-size: 20rpx;
+  text-align: center;
+  width: 100rpx;
+  padding: 15rpx;
+  border: 1rpx solid #ccc;
+  color: var(--themeColor);
+}

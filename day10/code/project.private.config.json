@@ -11,8 +11,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
+      "list": [{
           "name": "分类页面",
           "pathName": "pages/category/category",
           "query": "",
@@ -34,6 +33,12 @@
           "name": "商品详情",
           "pathName": "pages/goodDetail/goodDetail",
           "query": "goods_id=43986",
+          "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/cart/cart",
+          "query": "",
           "scene": null
         }
       ]
