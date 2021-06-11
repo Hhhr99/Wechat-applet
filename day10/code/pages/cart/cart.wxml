@@ -6,7 +6,7 @@
         mode="widthFix"></image>
       <view class="empty_text">购物车居然是空的</view>
       <view class="empty_info">再忙，也记得买点什么犒赏自己~</view>
-      <navigator url="/pages/category/index" open-type="switchTab">
+      <navigator url="/pages/category/category" open-type="switchTab">
         <view class="go_shopping">去逛逛</view>
       </navigator>
     </view>
