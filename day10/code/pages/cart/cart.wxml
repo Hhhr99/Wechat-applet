@@ -71,6 +71,7 @@
           优化逻辑
           1.如果去结算这里它的商品数量为0 “去结算” 灰掉 不能点击
            2. 只有 去结算 的数量不为0 才可以跳转到支付页面
+                      totalNum === 0
        -->
         <view class="tools_right" wx:if="{{!!totalNum}}">
           <navigator url="/pages/pay/index">去结算({{totalNum||0}})</navigator>
