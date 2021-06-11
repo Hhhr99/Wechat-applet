@@ -84,7 +84,7 @@ Page({
   },
   //处理购物小车的加减逻辑
   handleOperation: async function (e) {
-    //获取点击列表的参数 goods_id operation
+    //获取点击列表的参数 goods_id operation 可能是 1或者 -1
     const {
       goods_id,
       operation
@@ -107,6 +107,14 @@ Page({
 
     } else {
       carts[index].num += operation;
+      // 判断当前的添加商品数量是否会超过库存
+      if (carts[index].num + 1 > carts[index].goods_number) {
+        wx.showToast({
+          title: '商品数量已经操作库存了',
+        })
+      } else {
+        carts[index].num += operation; // -1 或者 1
+      }
     }
     this.setCart(carts);
   },
