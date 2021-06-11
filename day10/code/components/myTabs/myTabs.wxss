@@ -1,0 +1,17 @@
+/* components/myTabs/myTabs.wxss */
+.my-tabs{
+  display: flex;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.my-tabs-item{
+  line-height: 88rpx;
+  height: 88rpx;
+  flex:1;
+}
+.tabs-item-active{
+  border-bottom: 2rpx solid #eb4450;
+}

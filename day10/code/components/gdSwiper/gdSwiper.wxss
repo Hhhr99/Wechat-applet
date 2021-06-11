@@ -1,0 +1,13 @@
+/* components/gdSwiper/gdSwiper.wxss */
+.gd-swiper-image{
+  height: 497rpx;
+  width: 497rpx;
+}
+.gd-swiper-container{
+  height: 497rpx;
+}
+.gd-swiper-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
