@@ -46,6 +46,12 @@
           "pathName": "pages/pay/pay",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "授权页面",
+          "pathName": "pages/auth/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

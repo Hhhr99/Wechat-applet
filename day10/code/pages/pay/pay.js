@@ -10,16 +10,16 @@ handleAddressChoose 获取用户当前的收货地址
 *******************************
 handlePay 在本应用 微信支付流程
 A. 环境的准备
-   a.1 如果你是使用 https://www.linweiqin.cn/api/public/v1 接口的同学
+   a.1 如果你是使用 https://106.55.254.112/api/public/v1 接口的同学
    appId = wx45f217ba2cb42557
    同时把你的微信号 给到 林老师 =》 微信后台添加到开发者账号
    a.2 如果你是使用第三方平台提供的支付接口，就去平台看对应配置文档
 
 B. 微信支付流程
 1. 获取 token => openID 唯一标识
-接口：https://www.showdoc.cc/128719739414963?page_id=2612400282844951
+接口：https://www.showdoc.com.cn/1406249705440596?page_id=6903112722188945
 2. 在系统中创建一个订单
-接口 ：https://www.showdoc.cc/128719739414963?page_id=2612148628877795
+接口 ：https://www.showdoc.com.cn/1406249705440596?page_id=6903322875205749
 3. 获取支付参数
 接口：https://www.showdoc.cc/128719739414963?page_id=2612486239891213
 4. 发起支付  wx.requestPayment
@@ -103,31 +103,42 @@ Page({
         goods: goods
       }
       //创建订单
-      const {
-        order_number
-      } = await request({
-        url: "/my/orders/create",
+
+      let res1 = await request({
+        header: {
+          Authorization: wx.getStorageSync("token")
+        },
+        url: "my/orders/create",
         method: "post",
         data: order_params
       });
-      // console.log(order_number);
+
+      const order_number = res1.message.order_number;
+      console.log(order_number);
       //3. 获取支付参数
-      const {
-        pay
-      } = await request({
-        url: "/my/orders/req_unifiedorder",
+      let res2 = await request({
+        header: {
+          Authorization: wx.getStorageSync("token")
+        },
+        url: "my/orders/req_unifiedorder",
         method: "POST",
         data: {
           order_number
         }
       });
+      const {
+        pay
+      } = res2.message;
       //console.log(pay);
       // 4.发起支付 wx.requestPayment //https://developers.weixin.qq.com/miniprogram/dev/api/open-api/payment/wx.requestPayment.html
       //https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_1
       await requestPayment(pay);
       //5. 查询一下订单状态
       let res = await request({
-        url: "/my/orders/chkOrder",
+        header: {
+          Authorization: wx.getStorageSync("token")
+        },
+        url: "my/orders/chkOrder",
         method: "post",
         data: {
           order_number
@@ -142,7 +153,7 @@ Page({
       //!v.checked 没有被选中支付的商品
       newCarts = newCarts.filter(v => !v.checked)
       //设置回本地缓存
-      wx.setStorageSync("carts", newCarts);
+      wx.setStorageSync("cart", newCarts);
       //7. 跳转到订单页面
       wx.navigateTo({
         url: '/pages/order/index',

@@ -74,7 +74,7 @@
                       totalNum === 0
        -->
         <view class="tools_right" wx:if="{{!!totalNum}}">
-          <navigator url="/pages/pay/index">去结算({{totalNum||0}})</navigator>
+          <navigator url="/pages/pay/pay">去结算({{totalNum||0}})</navigator>
         </view>
         <view wx:else class="tools_right_disable">
           去结算({{totalNum||0}})

@@ -33,7 +33,7 @@
       1. 拿到购物小车数据
       2. 判断 =》 v.checked === true ==> 商品才被渲染出来
     -->
-    <view class="product_list_item" wx:for="{{carts}}" wx:if="{{item.checked}}" wx:key="index">
+    <view class="product_list_item" wx:for="{{carts}}" wx:if="{{item.checked}}" wx:key="goods_id">
       <view class="image_wrapper">
         <!--
       如果图片不存在的情况下 直接显示一张空白图片

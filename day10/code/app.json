@@ -9,6 +9,8 @@
     "pages/logs/logs",
     "pages/goodsList/goodsList",
     "pages/pay/pay",
+    "pages/auth/index",
+    "pages/order/index",
     "pages/test/test"
   ],
   "window": {
