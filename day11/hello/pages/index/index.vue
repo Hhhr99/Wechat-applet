@@ -2,7 +2,9 @@
 	<view class="content">
 		<!-- v-for 进行循环 组件使用微信小程序中的组件-->
 		<view v-for="(item,index) in news" :key="item.id">
-			<text>{{item.title}}</text>
+			<navigator :url="'/pages/detail/detail?id='+item.post_id">
+				<text>{{item.title}}</text>
+			</navigator>
 		</view>
 	</view>
 </template>

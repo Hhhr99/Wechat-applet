@@ -1,1 +1,1 @@
-<view class="content"><block wx:for="{{news}}" wx:for-item="item" wx:for-index="index" wx:key="id"><view><text>{{item.title}}</text></view></block></view>
+<view class="content"><block wx:for="{{news}}" wx:for-item="item" wx:for-index="index" wx:key="id"><view><navigator url="{{'/pages/detail/detail?id='+item.post_id}}"><text>{{item.title}}</text></navigator></view></block></view>
