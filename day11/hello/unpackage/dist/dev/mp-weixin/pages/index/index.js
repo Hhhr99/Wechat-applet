@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -146,15 +146,31 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 var _default =
 {
+  created: function created() {var _this = this;
+    // 小程序中通过获取请求数据的
+    // wx => uni
+    // 另外程序中打印出来调试信息 要去 具体的开发工具里面才可以看得到
+    uni.request({
+      url: "https://unidemo.dcloud.net.cn/api/news",
+      success: function success(res) {
+        console.log(res);
+        console.log(res.data);
+        // 直接赋值给 data 中的news
+        _this.news = res.data;
+      } });
+
+  },
   data: function data() {
     return {
-      title: 'hello' };
+      title: '￼helglo',
+      news: [] };
 
   },
   onLoad: function onLoad() {
 
   },
   methods: {} };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 17 */

@@ -1,17 +1,32 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+		<!-- v-for 进行循环 组件使用微信小程序中的组件-->
+		<view v-for="(item,index) in news" :key="item.id">
+			<text>{{item.title}}</text>
 		</view>
 	</view>
 </template>
 
 <script>
 	export default {
+		created() {
+			// 小程序中通过获取请求数据的
+			// wx => uni
+			// 另外程序中打印出来调试信息 要去 具体的开发工具里面才可以看得到
+			uni.request({
+				url: "https://unidemo.dcloud.net.cn/api/news",
+				success: (res) => {
+					console.log(res);
+					console.log(res.data);
+					// 直接赋值给 data 中的news
+					this.news = res.data;
+				}
+			})
+		},
 		data() {
 			return {
-				title: 'hello'
+				title: '￼helglo',
+				news:[]
 			}
 		},
 		onLoad() {
